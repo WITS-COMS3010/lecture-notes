@@ -8,9 +8,9 @@
 
 - Done by hardware.
 - Three types of mode transfer:
-  - System call (syscall) -- synchronous (programmed);
-  - Interrupt -- asynchronous (non-programmed);
-  - CPU exception -- asynchronous (non-programmed).
+  - System call (syscall) -- synchronous (programmed), during an instruction;
+  - Interrupt -- asynchronous (non-programmed), during an instruction;
+  - CPU exception -- asynchronous (non-programmed), in between instructions.
 - How does the kernel know which instruction to run upon a switch from a
   user process? -- Interrupt vector:
 ![Interrupt vector](interruptVector.png)
@@ -23,7 +23,6 @@
   - Resume after a syscall, an interrupt, or a CPU exception;
   - Switch to another process;
   - User-level upcall.
-
 
 ## How is a user process represented in the OS?
 
