@@ -9,8 +9,8 @@
 - Done by hardware.
 - Three types of mode transfer:
   - System call (syscall) -- synchronous (programmed), during an instruction;
-  - Interrupt -- asynchronous (non-programmed), during an instruction;
-  - CPU exception -- asynchronous (non-programmed), in between instructions.
+  - Interrupt -- asynchronous (non-programmed), in between instructions;
+  - CPU exception -- asynchronous (non-programmed), during an instruction.
 - How does the kernel know which instruction to run upon a switch from a
   user process? -- Interrupt vector:
 ![Interrupt vector](interruptVector.png)
